@@ -5,7 +5,7 @@ These are programs that are done for classes listed below.
 Detailed description of each project will be provided in their individual folders.
 There's also independent projects done just for fun if you want to check those out.
 
-**USE AT YOUR OWN RISK!!!**
+_**USE AT YOUR OWN RISK!!!**_
 
 - [ ] In Progress
 - [x] Completed
