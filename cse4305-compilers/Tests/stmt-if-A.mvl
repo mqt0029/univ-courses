@@ -1,0 +1,25 @@
+{
+  // Constant test => False, no else provided.
+  if 0 {
+    write( "was True" );
+  };
+
+  // Constant test => True, no else provided.
+  if 1 {
+    write( "was True" );
+  };
+
+  // Constant test => False, else provided.
+  if 0 {
+    write( "was True" );
+  } else {
+    write( "was False" );
+  };
+
+  // Constant test => True, else provided.
+  if 1 {
+    write( "was True" );
+  } else {
+    write( "was False" );
+  };
+}

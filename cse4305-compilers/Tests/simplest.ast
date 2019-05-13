@@ -1,0 +1,14 @@
+# simplest.mvl AST
+# 2019-05-05 18:15:52
+
+
+SCOPE 'SCOPE_1' <1>
+  LITERAL 'int', 1
+
+
+# simplest.mvl symbol table
+# 2019-05-05 18:15:52
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [0] <ENVIRONMENT>

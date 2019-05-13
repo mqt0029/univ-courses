@@ -1,0 +1,28 @@
+# stmt-while.mvl AST
+# 2019-04-28 19:01:29
+
+
+SCOPE 'SCOPE_1' <4>
+  NOOP
+  LOOP
+    SCOPE 'SCOPE_2' <1>
+      WRITE <1>
+        LITERAL 'string', 'infinite loop!'
+  VARIABLE_INIT SCOPE_1:a
+    LITERAL 'int', 0
+  WHILE
+    LVALUE 'SCOPE_1:a' 'int'
+    SCOPE 'SCOPE_3' <1>
+      WRITE <1>
+        LITERAL 'string', 'loop that has to be tested'
+
+
+# stmt-while.mvl symbol table
+# 2019-04-28 19:01:29
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [1] <ENVIRONMENT>
+  <Entry SCOPE_1(13) 'a':'int'>
+Scope SCOPE_2(8) [0] <SCOPE_1>
+Scope SCOPE_3(15) [0] <SCOPE_1>

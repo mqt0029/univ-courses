@@ -1,0 +1,31 @@
+# stmt-write.mvl parse tree
+# 2019-04-28 19:01:29
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <9>
+(   2)     STATEMENT (WRITE) <0>
+(   4)     STATEMENT (WRITE) <1>
+(   4)       LITERAL 'int' 42
+(   6)     STATEMENT (WRITE) <1>
+(   6)       LITERAL 'string' 'a message'
+(   8)     STATEMENT (WRITE) <2>
+(   8)       LITERAL 'int' 23
+(   8)       LITERAL 'string' ' is an integer'
+(  10)     DECLARATION (VARIABLE) 'a'
+(  10)       TYPE (NAME) 'int'
+(  10)       LITERAL 'int' 45
+(  11)     DECLARATION (VARIABLE) 'b'
+(  11)       TYPE (NAME) 'int'
+(  11)       LITERAL 'int' 67
+(  13)     STATEMENT (WRITE) <2>
+(  13)       BINARY_OP '+'
+(  13)         LVALUE (NAME) 'a'
+(  13)         LVALUE (NAME) 'b'
+(  13)       LITERAL 'string' ' is also an integer'
+(  15)     STATEMENT (WRITE) <3>
+(  15)       LITERAL 'string' 'Could '
+(  15)       LITERAL 'int' 89
+(  15)       LITERAL 'string' ' also be an integer?'
+(  17)     STATEMENT (WRITE) <1>
+(  17)       LITERAL 'string' 'Sure.  Why not?'

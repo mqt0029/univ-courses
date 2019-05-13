@@ -1,0 +1,26 @@
+# stmt-if-A.mvl AST
+# 2019-04-28 19:01:29
+
+
+SCOPE 'SCOPE_1' <4>
+  NOOP
+  SCOPE 'SCOPE_2' <1>
+    WRITE <1>
+      LITERAL 'string', 'was True'
+  SCOPE 'SCOPE_3' <1>
+    WRITE <1>
+      LITERAL 'string', 'was False'
+  SCOPE 'SCOPE_4' <1>
+    WRITE <1>
+      LITERAL 'string', 'was True'
+
+
+# stmt-if-A.mvl symbol table
+# 2019-04-28 19:01:29
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [0] <ENVIRONMENT>
+Scope SCOPE_2(8) [0] <SCOPE_1>
+Scope SCOPE_3(15) [0] <SCOPE_1>
+Scope SCOPE_4(20) [0] <SCOPE_1>

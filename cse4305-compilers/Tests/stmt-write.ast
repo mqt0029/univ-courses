@@ -1,0 +1,38 @@
+# stmt-write.mvl AST
+# 2019-04-28 19:01:29
+
+
+SCOPE 'SCOPE_1' <9>
+  WRITE <0>
+  WRITE <1>
+    LITERAL 'int', 42
+  WRITE <1>
+    LITERAL 'string', 'a message'
+  WRITE <2>
+    LITERAL 'int', 23
+    LITERAL 'string', ' is an integer'
+  VARIABLE_INIT SCOPE_1:a
+    LITERAL 'int', 45
+  VARIABLE_INIT SCOPE_1:b
+    LITERAL 'int', 67
+  WRITE <2>
+    BINARY_OP '+' 'int'
+      LVALUE 'SCOPE_1:a' 'int'
+      LVALUE 'SCOPE_1:b' 'int'
+    LITERAL 'string', ' is also an integer'
+  WRITE <3>
+    LITERAL 'string', 'Could '
+    LITERAL 'int', 89
+    LITERAL 'string', ' also be an integer?'
+  WRITE <1>
+    LITERAL 'string', 'Sure.  Why not?'
+
+
+# stmt-write.mvl symbol table
+# 2019-04-28 19:01:29
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [2] <ENVIRONMENT>
+  <Entry SCOPE_1(10) 'a':'int'>
+  <Entry SCOPE_1(11) 'b':'int'>

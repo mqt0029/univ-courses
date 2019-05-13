@@ -1,0 +1,25 @@
+# stmt-expr-B.mvl AST
+# 2019-04-28 19:01:29
+
+
+SCOPE 'SCOPE_1' <12>
+  LITERAL 'int', 8
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+
+
+# stmt-expr-B.mvl symbol table
+# 2019-04-28 19:01:29
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [0] <ENVIRONMENT>

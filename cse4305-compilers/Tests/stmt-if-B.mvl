@@ -1,0 +1,15 @@
+{
+  a : int;
+
+  // Variable test, no else provided.
+  if a {
+    write( "was True" );
+  };
+
+  // Variable test, else provided.
+  if a {
+    write( "was True" );
+  } else {
+    write( "was False" );
+  };
+}

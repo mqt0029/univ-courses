@@ -1,0 +1,17 @@
+# stmt-read.mvl parse tree
+# 2019-04-28 19:01:29
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <5>
+(   2)     DECLARATION (VARIABLE-NO-INIT) 'a'
+(   2)       TYPE (NAME) 'int'
+(   3)     DECLARATION (VARIABLE-NO-INIT) 'b'
+(   3)       TYPE (NAME) 'int'
+(   4)     DECLARATION (VARIABLE-NO-INIT) 'c'
+(   4)       TYPE (NAME) 'int'
+(   6)     STATEMENT (READ) <1>
+(   6)       LVALUE (NAME) 'a'
+(   7)     STATEMENT (READ) <2>
+(   7)       LVALUE (NAME) 'a'
+(   7)       LVALUE (NAME) 'b'

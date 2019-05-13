@@ -1,0 +1,116 @@
+#-------------------------------------------------------
+#   NAME: MINH TRAM
+#   ID: 1001540029
+#   SECTION: CSE4308-001
+#   ASSIGNMENT 6
+#-------------------------------------------------------
+
+# --- RULE 1 ---
+# Description: If there is a monster at square (i,j), there is stench at all adjacent squares.
+# Extended: If there's a stench in 4 squares surrounding one square, that square has a monster in it.
+# Removed (from contradictions): M_1_1, M_1_2, M_2_1, M_2_2
+
+(IF M_1_3 (AND S_1_4 S_2_3 S_1_2))
+(IF M_1_4 (AND S_1_3 S_2_4))
+(IF M_2_3 (AND S_1_3 S_2_4 S_3_3 S_2_2))
+(IF M_2_4 (AND S_1_4 S_2_3 S_3_4))
+(IF M_3_1 (AND S_2_1 S_3_2 S_4_1))
+(IF M_3_2 (AND S_2_2 S_3_3 S_4_2 S_3_1))
+(IF M_3_3 (AND S_2_3 S_3_4 S_4_3 S_3_2))
+(IF M_3_4 (AND S_2_4 S_3_3 S_4_4))
+(IF M_4_1 (AND S_3_1 S_4_2))
+(IF M_4_2 (AND S_3_2 S_4_3 S_4_1))
+(IF M_4_3 (AND S_3_3 S_4_2 S_4_4))
+(IF M_4_4 (AND S_3_4 S_4_3))
+
+# --- RULE 2 ---
+# Description: If there is stench at square (i,j), there is a monster at one of the adjacent squares.
+# Extended: 
+# Removed (from contradictions): S_1_1, M_1_1, M_1_2, M_2_1, M_2_2
+
+(IF S_1_2 M_1_3)
+(IF S_1_3 (XOR M_1_4 M_2_3))
+(IF S_1_4 (XOR M_1_3 M_2_4))
+(IF S_2_1 M_3_1)
+(IF S_2_2 (XOR M_2_3 M_3_2))
+(IF S_2_3 (XOR M_1_3 M_2_4 M_3_3))
+(IF S_2_4 (XOR M_1_4 M_2_3 M_3_4))
+(IF S_3_1 (XOR M_4_1 M_3_2))
+(IF S_3_2 (XOR M_3_1 M_4_2 M_3_3))
+(IF S_3_3 (XOR M_2_3 M_3_4 M_4_3 M_3_2))
+(IF S_3_4 (XOR M_2_4 M_3_3 M_4_4))
+(IF S_4_1 (XOR M_3_1 M_4_2))
+(IF S_4_2 (XOR M_4_1 M_3_2 M_4_3))
+(IF S_4_3 (XOR M_4_2 M_3_3 M_4_4))
+(IF S_4_4 (XOR M_3_4 M_4_3))
+
+# --- RULE 3 ---
+# Description: If there is a pit at square (i,j), there is breeze at all adjacent squares.
+# Extended: If there's 4 breeze surrounding a square, that square has a pit. If there's a pit, there can't be a monster. If there's a monster, there can't be a pit.
+# Removed (from contradictions): P_1_1, P_1_2, P_2_1, P_2_2
+
+(IF P_1_3 (AND B_1_4 B_2_3 B_1_2))
+(IF P_1_4 (AND B_1_3 B_2_4))
+(IF P_2_3 (AND B_1_3 B_2_4 B_3_3 B_2_2))
+(IF P_2_4 (AND B_1_4 B_2_3 B_3_4))
+(IF P_3_1 (AND B_2_1 B_3_2 B_4_1))
+(IF P_3_2 (AND B_2_2 B_3_3 B_4_2 B_3_1))
+(IF P_3_3 (AND B_2_3 B_3_4 B_4_3 B_3_2))
+(IF P_3_4 (AND B_2_4 B_3_3 B_4_4))
+(IF P_4_1 (AND B_3_1 B_4_2))
+(IF P_4_2 (AND B_3_2 B_4_3 B_4_1))
+(IF P_4_3 (AND B_3_3 B_4_2 B_4_4))
+(IF P_4_4 (AND B_3_4 B_4_3))
+
+# --- RULE 4 ---
+# Description: If there is breeze at square (i,j), there is a pit at one or more of the adjacent squares.
+# Extended: 
+# Removed (from contradictions): P_1_1, P_1_2, P_2_1, P_2_2, B_1_1
+
+(IF B_1_2 P_1_3)
+(IF B_1_3 (OR P_1_4 P_2_3))
+(IF B_1_4 (OR P_1_3 P_2_4))
+(IF B_2_1 P_3_1)
+(IF B_2_2 (OR P_2_3 P_3_2))
+(IF B_2_3 (OR P_1_3 P_2_4 P_3_3))
+(IF B_2_4 (OR P_1_4 P_2_3 P_3_4))
+(IF B_3_1 (OR P_4_1 P_3_2))
+(IF B_3_2 (OR P_3_1 P_4_2 P_3_3))
+(IF B_3_3 (OR P_2_3 P_3_4 P_4_3 P_3_2))
+(IF B_3_4 (OR P_2_4 P_3_3 P_4_4))
+(IF B_4_1 (OR P_3_1 P_4_2))
+(IF B_4_2 (OR P_4_1 P_3_2 P_4_3))
+(IF B_4_3 (OR P_4_2 P_3_3 P_4_4))
+(IF B_4_4 (OR P_3_4 P_4_3))
+
+# --- RULE 5 ---
+# Description: There is one and only one monster (no more, no fewer).
+# Extended:
+# Removed (from contradictions): M_1_1, M_1_2, M_2_1, M_2_2
+
+(XOR M_1_3 M_1_4 M_2_3 M_2_4 M_3_1 M_3_2 M_3_3 M_3_4 M_4_1 M_4_2 M_4_3 M_4_4)
+
+# --- RULE 6 ---
+# Description: Squares (1,1), (1,2), (2,1), (2,2) have no monsters and no pits.
+# Extended: No breeze or stench at (1,1)
+# Removed (from contradictions): 
+
+(NOT M_1_1)
+(NOT M_1_2)
+(NOT M_2_1)
+(NOT M_2_2)
+(NOT P_1_1)
+(NOT P_1_2)
+(NOT P_2_1)
+(NOT P_2_2)
+(NOT B_1_1)
+(NOT S_1_1)
+
+# --- RULE 7 ---
+# Description: The number of pits can be between 1 and 11.
+# Extended:
+# Removed (from contradictions): P_1_1, P_1_2, P_2_1, P_2_2
+
+(NOT (OR (NOT (OR P_1_3 P_1_4 P_2_3 P_2_4 P_3_1 P_3_2 P_3_3 P_3_4 P_4_1 P_4_2 P_4_3 P_4_4)) (AND P_1_3 P_1_4 P_2_3 P_2_4 P_3_1 P_3_2 P_3_3 P_3_4 P_4_1 P_4_2 P_4_3 P_4_4)))
+
+

@@ -1,0 +1,23 @@
+# stmt-while.mvl parse tree
+# 2019-04-28 19:01:29
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <4>
+(   3)     STATEMENT (WHILE)
+(   3)       LITERAL 'int' 0
+(   3)       STATEMENT (BLOCK) <1>
+(   4)         STATEMENT (WRITE) <1>
+(   4)           LITERAL 'string' 'this never happens'
+(   8)     STATEMENT (WHILE)
+(   8)       LITERAL 'int' 1
+(   8)       STATEMENT (BLOCK) <1>
+(   9)         STATEMENT (WRITE) <1>
+(   9)           LITERAL 'string' 'infinite loop!'
+(  13)     DECLARATION (VARIABLE-NO-INIT) 'a'
+(  13)       TYPE (NAME) 'int'
+(  15)     STATEMENT (WHILE)
+(  15)       LVALUE (NAME) 'a'
+(  15)       STATEMENT (BLOCK) <1>
+(  16)         STATEMENT (WRITE) <1>
+(  16)           LITERAL 'string' 'loop that has to be tested'

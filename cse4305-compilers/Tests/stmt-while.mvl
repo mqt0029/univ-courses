@@ -1,0 +1,18 @@
+{
+  // Constant test => False
+  while 0 {
+    write( "this never happens" )
+  };
+
+  // Constant test => True
+  while 1 {
+    write( "infinite loop!" )
+  };
+
+  // Variable test
+  a : int;
+
+  while a {
+    write( "loop that has to be tested" )
+  }
+}

@@ -1,0 +1,17 @@
+{
+  // Decl w/o init
+  a : int;
+  b : int = 23;
+
+  {
+    // Decls in nested block
+    a : int = 45;
+    b : int;
+
+    {
+      // Decls in really nested block
+      a : int = 67;
+      b : int;
+    }
+  }
+}

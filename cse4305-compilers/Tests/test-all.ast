@@ -1,0 +1,60 @@
+# test-all.mvl AST
+# 2019-05-02 17:13:27
+
+
+SCOPE 'SCOPE_1' <9>
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+  VARIABLE_INIT SCOPE_1:a
+    LITERAL 'int', 23
+  VARIABLE_INIT SCOPE_1:b
+    LITERAL 'int', 0
+  SCOPE 'SCOPE_2' <1>
+    BINARY_OP '%' 'int'
+      LVALUE 'SCOPE_1:a' 'int'
+      LVALUE 'SCOPE_1:b' 'int'
+  IF
+    BINARY_OP '!=' 'int'
+      LVALUE 'SCOPE_1:a' 'int'
+      LVALUE 'SCOPE_1:b' 'int'
+    SCOPE 'SCOPE_3' <1>
+      WRITE <1>
+        LITERAL 'string', 'Then!'
+    NOOP
+  IF
+    BINARY_OP '%' 'int'
+      LVALUE 'SCOPE_1:a' 'int'
+      LVALUE 'SCOPE_1:b' 'int'
+    SCOPE 'SCOPE_4' <1>
+      READ <1>
+        LVALUE 'SCOPE_1:a' 'int'
+    SCOPE 'SCOPE_5' <1>
+      WRITE <2>
+        LITERAL 'string', 'b ='
+        LVALUE 'SCOPE_1:b' 'int'
+  WHILE
+    BINARY_OP '>' 'int'
+      LVALUE 'SCOPE_1:a' 'int'
+      LVALUE 'SCOPE_1:b' 'int'
+    SCOPE 'SCOPE_6' <1>
+      BINARY_OP '=' 'int'
+        LVALUE 'SCOPE_1:a' 'int'
+        BINARY_OP '-' 'int'
+          LVALUE 'SCOPE_1:a' 'int'
+          LVALUE 'SCOPE_1:b' 'int'
+
+
+# test-all.mvl symbol table
+# 2019-05-02 17:13:27
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [2] <ENVIRONMENT>
+  <Entry SCOPE_1(8) 'a':'int'>
+  <Entry SCOPE_1(9) 'b':'int'>
+Scope SCOPE_2(11) [0] <SCOPE_1>
+Scope SCOPE_3(15) [0] <SCOPE_1>
+Scope SCOPE_4(20) [0] <SCOPE_1>
+Scope SCOPE_5(23) [0] <SCOPE_1>
+Scope SCOPE_6(28) [0] <SCOPE_1>

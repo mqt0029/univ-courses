@@ -1,0 +1,16 @@
+# stmt-expr-C.mvl AST
+# 2019-05-02 17:13:09
+
+
+SCOPE 'SCOPE_1' <3>
+  LITERAL 'int', -20
+  LITERAL 'int', 1
+  LITERAL 'int', 1
+
+
+# stmt-expr-C.mvl symbol table
+# 2019-05-02 17:13:09
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [0] <ENVIRONMENT>

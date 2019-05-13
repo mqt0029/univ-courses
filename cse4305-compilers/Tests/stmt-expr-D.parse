@@ -1,0 +1,38 @@
+# stmt-expr-D.mvl parse tree
+# 2019-05-02 18:49:12
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <1>
+(   2)     STATEMENT (WHILE)
+(   2)       LITERAL 'int' 1
+(   2)       STATEMENT (BLOCK) <6>
+(   3)         STATEMENT (WRITE) <1>
+(   3)           LITERAL 'string' 'before outer var decls'
+(   5)         DECLARATION (VARIABLE) 'b'
+(   5)           TYPE (NAME) 'int'
+(   5)           LITERAL 'int' 12
+(   7)         STATEMENT (WHILE)
+(   7)           LITERAL 'int' 1
+(   7)           STATEMENT (BLOCK) <4>
+(   8)             STATEMENT (WRITE) <1>
+(   8)               LITERAL 'string' 'before inner var decls'
+(  10)             DECLARATION (VARIABLE-NO-INIT) 't'
+(  10)               TYPE (NAME) 'int'
+(  12)             DECLARATION (VARIABLE) 'a'
+(  12)               TYPE (NAME) 'int'
+(  12)               BINARY_OP '+'
+(  12)                 LVALUE (NAME) 'b'
+(  12)                 LVALUE (NAME) 't'
+(  14)             STATEMENT (WRITE) <1>
+(  14)               LITERAL 'string' 'after inner var decls'
+(  17)         DECLARATION (VARIABLE) 'a'
+(  17)           TYPE (NAME) 'int'
+(  17)           LITERAL 'int' 34
+(  18)         DECLARATION (VARIABLE) 't'
+(  18)           TYPE (NAME) 'int'
+(  18)           BINARY_OP '+'
+(  18)             LVALUE (NAME) 'a'
+(  18)             LVALUE (NAME) 'b'
+(  20)         STATEMENT (WRITE) <1>
+(  20)           LITERAL 'string' 'after outer var decls'

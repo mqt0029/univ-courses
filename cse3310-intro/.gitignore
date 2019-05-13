@@ -1,0 +1,6 @@
+.vscode
+asio-1.12.2
+.DS_Store
+*.dSYM
+chat_server
+chat_client

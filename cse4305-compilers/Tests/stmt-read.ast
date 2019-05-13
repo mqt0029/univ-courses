@@ -1,0 +1,27 @@
+# stmt-read.mvl AST
+# 2019-04-28 19:01:29
+
+
+SCOPE 'SCOPE_1' <5>
+  VARIABLE_INIT SCOPE_1:a
+    LITERAL 'int', 0
+  VARIABLE_INIT SCOPE_1:b
+    LITERAL 'int', 0
+  VARIABLE_INIT SCOPE_1:c
+    LITERAL 'int', 0
+  READ <1>
+    LVALUE 'SCOPE_1:a' 'int'
+  READ <2>
+    LVALUE 'SCOPE_1:a' 'int'
+    LVALUE 'SCOPE_1:b' 'int'
+
+
+# stmt-read.mvl symbol table
+# 2019-04-28 19:01:29
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [3] <ENVIRONMENT>
+  <Entry SCOPE_1(2) 'a':'int'>
+  <Entry SCOPE_1(3) 'b':'int'>
+  <Entry SCOPE_1(4) 'c':'int'>

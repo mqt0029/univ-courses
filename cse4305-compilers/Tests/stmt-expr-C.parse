@@ -1,0 +1,24 @@
+# stmt-expr-C.mvl parse tree
+# 2019-05-02 17:13:09
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <3>
+(   2)     STATEMENT (EXPRESSION)
+(   2)       UNARY_OP '-'
+(   2)         LITERAL 'int' 20
+(   3)     STATEMENT (EXPRESSION)
+(   3)       BINARY_OP '+'
+(   3)         UNARY_OP '-'
+(   3)           LITERAL 'int' 20
+(   3)         UNARY_OP '+'
+(   3)           LITERAL 'int' 21
+(   4)     STATEMENT (EXPRESSION)
+(   4)       BINARY_OP '+'
+(   4)         UNARY_OP '-'
+(   4)           LITERAL 'int' 20
+(   4)         UNARY_OP '+'
+(   4)           BINARY_OP '-'
+(   4)             LITERAL 'int' 21
+(   4)             UNARY_OP '!'
+(   4)               LITERAL 'int' 22

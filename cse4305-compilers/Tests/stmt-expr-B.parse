@@ -1,0 +1,162 @@
+# stmt-expr-B.mvl parse tree
+# 2019-04-28 19:01:29
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <12>
+(   2)     STATEMENT (EXPRESSION)
+(   2)       LITERAL 'int' 8
+(   3)     STATEMENT (EXPRESSION)
+(   3)       BINARY_OP '<'
+(   3)         LITERAL 'int' 8
+(   3)         LITERAL 'int' 9
+(   4)     STATEMENT (EXPRESSION)
+(   4)       BINARY_OP '||'
+(   4)         BINARY_OP '<'
+(   4)           LITERAL 'int' 8
+(   4)           LITERAL 'int' 9
+(   4)         LITERAL 'int' 10
+(   5)     STATEMENT (EXPRESSION)
+(   5)       BINARY_OP '||'
+(   5)         BINARY_OP '<'
+(   5)           LITERAL 'int' 8
+(   5)           LITERAL 'int' 9
+(   5)         BINARY_OP '<='
+(   5)           LITERAL 'int' 10
+(   5)           LITERAL 'int' 11
+(   6)     STATEMENT (EXPRESSION)
+(   6)       BINARY_OP '||'
+(   6)         BINARY_OP '<'
+(   6)           LITERAL 'int' 8
+(   6)           LITERAL 'int' 9
+(   6)         BINARY_OP '&&'
+(   6)           BINARY_OP '<='
+(   6)             LITERAL 'int' 10
+(   6)             LITERAL 'int' 11
+(   6)           LITERAL 'int' 12
+(   7)     STATEMENT (EXPRESSION)
+(   7)       BINARY_OP '||'
+(   7)         BINARY_OP '<'
+(   7)           LITERAL 'int' 8
+(   7)           LITERAL 'int' 9
+(   7)         BINARY_OP '&&'
+(   7)           BINARY_OP '<='
+(   7)             LITERAL 'int' 10
+(   7)             LITERAL 'int' 11
+(   7)           BINARY_OP '=='
+(   7)             LITERAL 'int' 12
+(   7)             LITERAL 'int' 13
+(   8)     STATEMENT (EXPRESSION)
+(   8)       BINARY_OP '||'
+(   8)         BINARY_OP '||'
+(   8)           BINARY_OP '<'
+(   8)             LITERAL 'int' 8
+(   8)             LITERAL 'int' 9
+(   8)           BINARY_OP '&&'
+(   8)             BINARY_OP '<='
+(   8)               LITERAL 'int' 10
+(   8)               LITERAL 'int' 11
+(   8)             BINARY_OP '=='
+(   8)               LITERAL 'int' 12
+(   8)               LITERAL 'int' 13
+(   8)         LITERAL 'int' 14
+(   9)     STATEMENT (EXPRESSION)
+(   9)       BINARY_OP '||'
+(   9)         BINARY_OP '||'
+(   9)           BINARY_OP '<'
+(   9)             LITERAL 'int' 8
+(   9)             LITERAL 'int' 9
+(   9)           BINARY_OP '&&'
+(   9)             BINARY_OP '<='
+(   9)               LITERAL 'int' 10
+(   9)               LITERAL 'int' 11
+(   9)             BINARY_OP '=='
+(   9)               LITERAL 'int' 12
+(   9)               LITERAL 'int' 13
+(   9)         BINARY_OP '!='
+(   9)           LITERAL 'int' 14
+(   9)           LITERAL 'int' 15
+(  10)     STATEMENT (EXPRESSION)
+(  10)       BINARY_OP '||'
+(  10)         BINARY_OP '||'
+(  10)           BINARY_OP '<'
+(  10)             LITERAL 'int' 8
+(  10)             LITERAL 'int' 9
+(  10)           BINARY_OP '&&'
+(  10)             BINARY_OP '<='
+(  10)               LITERAL 'int' 10
+(  10)               LITERAL 'int' 11
+(  10)             BINARY_OP '=='
+(  10)               LITERAL 'int' 12
+(  10)               LITERAL 'int' 13
+(  10)         BINARY_OP '&&'
+(  10)           BINARY_OP '!='
+(  10)             LITERAL 'int' 14
+(  10)             LITERAL 'int' 15
+(  10)           LITERAL 'int' 16
+(  11)     STATEMENT (EXPRESSION)
+(  11)       BINARY_OP '||'
+(  11)         BINARY_OP '||'
+(  11)           BINARY_OP '<'
+(  11)             LITERAL 'int' 8
+(  11)             LITERAL 'int' 9
+(  11)           BINARY_OP '&&'
+(  11)             BINARY_OP '<='
+(  11)               LITERAL 'int' 10
+(  11)               LITERAL 'int' 11
+(  11)             BINARY_OP '=='
+(  11)               LITERAL 'int' 12
+(  11)               LITERAL 'int' 13
+(  11)         BINARY_OP '&&'
+(  11)           BINARY_OP '!='
+(  11)             LITERAL 'int' 14
+(  11)             LITERAL 'int' 15
+(  11)           BINARY_OP '>='
+(  11)             LITERAL 'int' 16
+(  11)             LITERAL 'int' 17
+(  12)     STATEMENT (EXPRESSION)
+(  12)       BINARY_OP '||'
+(  12)         BINARY_OP '||'
+(  12)           BINARY_OP '||'
+(  12)             BINARY_OP '<'
+(  12)               LITERAL 'int' 8
+(  12)               LITERAL 'int' 9
+(  12)             BINARY_OP '&&'
+(  12)               BINARY_OP '<='
+(  12)                 LITERAL 'int' 10
+(  12)                 LITERAL 'int' 11
+(  12)               BINARY_OP '=='
+(  12)                 LITERAL 'int' 12
+(  12)                 LITERAL 'int' 13
+(  12)           BINARY_OP '&&'
+(  12)             BINARY_OP '!='
+(  12)               LITERAL 'int' 14
+(  12)               LITERAL 'int' 15
+(  12)             BINARY_OP '>='
+(  12)               LITERAL 'int' 16
+(  12)               LITERAL 'int' 17
+(  12)         LITERAL 'int' 18
+(  13)     STATEMENT (EXPRESSION)
+(  13)       BINARY_OP '||'
+(  13)         BINARY_OP '||'
+(  13)           BINARY_OP '||'
+(  13)             BINARY_OP '<'
+(  13)               LITERAL 'int' 8
+(  13)               LITERAL 'int' 9
+(  13)             BINARY_OP '&&'
+(  13)               BINARY_OP '<='
+(  13)                 LITERAL 'int' 10
+(  13)                 LITERAL 'int' 11
+(  13)               BINARY_OP '=='
+(  13)                 LITERAL 'int' 12
+(  13)                 LITERAL 'int' 13
+(  13)           BINARY_OP '&&'
+(  13)             BINARY_OP '!='
+(  13)               LITERAL 'int' 14
+(  13)               LITERAL 'int' 15
+(  13)             BINARY_OP '>='
+(  13)               LITERAL 'int' 16
+(  13)               LITERAL 'int' 17
+(  13)         BINARY_OP '>'
+(  13)           LITERAL 'int' 18
+(  13)           LITERAL 'int' 19

@@ -1,0 +1,8 @@
+{
+  a : int;
+  b : int;
+  c : int;
+
+  read( a );
+  read( a, b );
+}

@@ -1,0 +1,18 @@
+{
+  write();
+
+  write( 42 );
+
+  write( "a message" );
+
+  write( 23, " is an integer" );
+
+  a : int = 45;
+  b : int = 67;
+
+  write( a + b, " is also an integer" );
+
+  write( "Could ", 89, " also be an integer?" );
+
+  write( "Sure.  Why not?" );
+}

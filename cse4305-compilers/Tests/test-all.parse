@@ -1,0 +1,92 @@
+# test-all.mvl parse tree
+# 2019-05-02 17:13:27
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <9>
+(   2)     STATEMENT (EXPRESSION)
+(   2)       BINARY_OP '-'
+(   2)         BINARY_OP '+'
+(   2)           LITERAL 'int' 1
+(   2)           LITERAL 'int' 2
+(   2)         BINARY_OP '%'
+(   2)           BINARY_OP '/'
+(   2)             BINARY_OP '*'
+(   2)               LITERAL 'int' 3
+(   2)               LITERAL 'int' 4
+(   2)             LITERAL 'int' 5
+(   2)           BINARY_OP '^'
+(   2)             LITERAL 'int' 6
+(   2)             LITERAL 'int' 7
+(   4)     STATEMENT (EXPRESSION)
+(   4)       BINARY_OP '||'
+(   4)         BINARY_OP '||'
+(   4)           BINARY_OP '||'
+(   4)             BINARY_OP '<'
+(   4)               LITERAL 'int' 8
+(   4)               LITERAL 'int' 9
+(   4)             BINARY_OP '&&'
+(   4)               BINARY_OP '<='
+(   4)                 LITERAL 'int' 10
+(   4)                 LITERAL 'int' 11
+(   4)               BINARY_OP '=='
+(   4)                 LITERAL 'int' 12
+(   4)                 LITERAL 'int' 13
+(   4)           BINARY_OP '&&'
+(   4)             BINARY_OP '!='
+(   4)               LITERAL 'int' 14
+(   4)               LITERAL 'int' 15
+(   4)             BINARY_OP '>='
+(   4)               LITERAL 'int' 16
+(   4)               LITERAL 'int' 17
+(   4)         BINARY_OP '>'
+(   4)           LITERAL 'int' 18
+(   4)           LITERAL 'int' 19
+(   6)     STATEMENT (EXPRESSION)
+(   6)       BINARY_OP '+'
+(   6)         UNARY_OP '-'
+(   6)           LITERAL 'int' 20
+(   6)         UNARY_OP '+'
+(   6)           BINARY_OP '-'
+(   6)             LITERAL 'int' 21
+(   6)             UNARY_OP '!'
+(   6)               LITERAL 'int' 22
+(   8)     DECLARATION (VARIABLE) 'a'
+(   8)       TYPE (NAME) 'int'
+(   8)       LITERAL 'int' 23
+(   9)     DECLARATION (VARIABLE-NO-INIT) 'b'
+(   9)       TYPE (NAME) 'int'
+(  11)     STATEMENT (BLOCK) <1>
+(  12)       STATEMENT (EXPRESSION)
+(  12)         BINARY_OP '%'
+(  12)           LVALUE (NAME) 'a'
+(  12)           LVALUE (NAME) 'b'
+(  15)     STATEMENT (IF-THEN)
+(  15)       BINARY_OP '!='
+(  15)         LVALUE (NAME) 'a'
+(  15)         LVALUE (NAME) 'b'
+(  15)       STATEMENT (BLOCK) <1>
+(  17)         STATEMENT (WRITE) <1>
+(  17)           LITERAL 'string' 'Then!'
+(  20)     STATEMENT (IF-THEN-ELSE)
+(  20)       BINARY_OP '%'
+(  20)         LVALUE (NAME) 'a'
+(  20)         LVALUE (NAME) 'b'
+(  20)       STATEMENT (BLOCK) <1>
+(  22)         STATEMENT (READ) <1>
+(  22)           LVALUE (NAME) 'a'
+(  23)       STATEMENT (BLOCK) <1>
+(  25)         STATEMENT (WRITE) <2>
+(  25)           LITERAL 'string' 'b ='
+(  25)           LVALUE (NAME) 'b'
+(  28)     STATEMENT (WHILE)
+(  28)       BINARY_OP '>'
+(  28)         LVALUE (NAME) 'a'
+(  28)         LVALUE (NAME) 'b'
+(  28)       STATEMENT (BLOCK) <1>
+(  29)         STATEMENT (EXPRESSION)
+(  29)           BINARY_OP '='
+(  29)             LVALUE (NAME) 'a'
+(  29)             BINARY_OP '-'
+(  29)               LVALUE (NAME) 'a'
+(  29)               LVALUE (NAME) 'b'

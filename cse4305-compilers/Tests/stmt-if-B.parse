@@ -1,0 +1,21 @@
+# stmt-if-B.mvl parse tree
+# 2019-04-30 17:22:22
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <3>
+(   2)     DECLARATION (VARIABLE-NO-INIT) 'a'
+(   2)       TYPE (NAME) 'int'
+(   5)     STATEMENT (IF-THEN)
+(   5)       LVALUE (NAME) 'a'
+(   5)       STATEMENT (BLOCK) <1>
+(   6)         STATEMENT (WRITE) <1>
+(   6)           LITERAL 'string' 'was True'
+(  10)     STATEMENT (IF-THEN-ELSE)
+(  10)       LVALUE (NAME) 'a'
+(  10)       STATEMENT (BLOCK) <1>
+(  11)         STATEMENT (WRITE) <1>
+(  11)           LITERAL 'string' 'was True'
+(  12)       STATEMENT (BLOCK) <1>
+(  13)         STATEMENT (WRITE) <1>
+(  13)           LITERAL 'string' 'was False'

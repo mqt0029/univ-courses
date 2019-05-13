@@ -1,0 +1,33 @@
+NAME: MINH TRAM
+STUDENT ID: 1001540029
+LANGUAGE: JAVA
+
+EVALUATION FUNCTION
+-------------------
+
+from: GameBoard.java
+
+declaration: public int evaluation()
+
+return: how much the current player calling on this function is "winning" by the measure of possible 4, 3, or 2 in a row that player has.
+
+weighted values: 4 in a rows is 1000, 3 in a row is 100, 2 in a row is 10 and single pieces are ignored.
+
+functionality: The function will check all possible combinations specified above to see if the next move will potentially "benefits" the current player.
+               The function will check for current winning points, possible winning points and constructing points. When _ is blank space and 0 is the current player,
+               for example, the following settings yields the following values:
+
+                       0    0          0
+               0000 or 0 or  0   or   0    worth 1000 points each.
+                       0      0      0
+                       0       0    0
+
+                       _    _          _
+               000_ or 0 or  0   or   0    with the blank in any of the other 0 position worth 100 points each.
+                       0      0      0
+                       0       0    0
+
+                       _    0          _
+               _0_0 or 0 or  _   or   0    with the two blanks in any other 0 position worth 10 points each.
+                       0      0      0
+                               _    _

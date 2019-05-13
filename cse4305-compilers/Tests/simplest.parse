@@ -1,0 +1,8 @@
+# simplest.mvl parse tree
+# 2019-05-05 18:15:52
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <1>
+(   2)     STATEMENT (EXPRESSION)
+(   2)       LITERAL 'int' 1

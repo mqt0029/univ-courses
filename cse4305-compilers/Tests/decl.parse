@@ -1,0 +1,23 @@
+# decl.mvl parse tree
+# 2019-04-28 19:01:29
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <3>
+(   3)     DECLARATION (VARIABLE-NO-INIT) 'a'
+(   3)       TYPE (NAME) 'int'
+(   4)     DECLARATION (VARIABLE) 'b'
+(   4)       TYPE (NAME) 'int'
+(   4)       LITERAL 'int' 23
+(   6)     STATEMENT (BLOCK) <3>
+(   8)       DECLARATION (VARIABLE) 'a'
+(   8)         TYPE (NAME) 'int'
+(   8)         LITERAL 'int' 45
+(   9)       DECLARATION (VARIABLE-NO-INIT) 'b'
+(   9)         TYPE (NAME) 'int'
+(  11)       STATEMENT (BLOCK) <2>
+(  13)         DECLARATION (VARIABLE) 'a'
+(  13)           TYPE (NAME) 'int'
+(  13)           LITERAL 'int' 67
+(  14)         DECLARATION (VARIABLE-NO-INIT) 'b'
+(  14)           TYPE (NAME) 'int'

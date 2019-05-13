@@ -1,0 +1,46 @@
+# stmt-expr-D.mvl AST
+# 2019-05-02 18:49:12
+
+
+SCOPE 'SCOPE_1' <1>
+  LOOP
+    SCOPE 'SCOPE_2' <6>
+      WRITE <1>
+        LITERAL 'string', 'before outer var decls'
+      VARIABLE_INIT SCOPE_2:b
+        LITERAL 'int', 12
+      LOOP
+        SCOPE 'SCOPE_3' <4>
+          WRITE <1>
+            LITERAL 'string', 'before inner var decls'
+          VARIABLE_INIT SCOPE_3:t
+            LITERAL 'int', 0
+          VARIABLE_INIT SCOPE_3:a
+            BINARY_OP '+' 'int'
+              LVALUE 'SCOPE_2:b' 'int'
+              LVALUE 'SCOPE_3:t' 'int'
+          WRITE <1>
+            LITERAL 'string', 'after inner var decls'
+      VARIABLE_INIT SCOPE_2:a
+        LITERAL 'int', 34
+      VARIABLE_INIT SCOPE_2:t
+        BINARY_OP '+' 'int'
+          LVALUE 'SCOPE_2:a' 'int'
+          LVALUE 'SCOPE_2:b' 'int'
+      WRITE <1>
+        LITERAL 'string', 'after outer var decls'
+
+
+# stmt-expr-D.mvl symbol table
+# 2019-05-02 18:49:12
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [0] <ENVIRONMENT>
+Scope SCOPE_2(2) [3] <SCOPE_1>
+  <Entry SCOPE_2(17) 'a':'int'>
+  <Entry SCOPE_2(5) 'b':'int'>
+  <Entry SCOPE_2(18) 't':'int'>
+Scope SCOPE_3(7) [2] <SCOPE_2>
+  <Entry SCOPE_3(12) 'a':'int'>
+  <Entry SCOPE_3(10) 't':'int'>

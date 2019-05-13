@@ -1,0 +1,35 @@
+# decl.mvl AST
+# 2019-04-28 19:01:29
+
+
+SCOPE 'SCOPE_1' <3>
+  VARIABLE_INIT SCOPE_1:a
+    LITERAL 'int', 0
+  VARIABLE_INIT SCOPE_1:b
+    LITERAL 'int', 23
+  SCOPE 'SCOPE_2' <3>
+    VARIABLE_INIT SCOPE_2:a
+      LITERAL 'int', 45
+    VARIABLE_INIT SCOPE_2:b
+      LITERAL 'int', 0
+    SCOPE 'SCOPE_3' <2>
+      VARIABLE_INIT SCOPE_3:a
+        LITERAL 'int', 67
+      VARIABLE_INIT SCOPE_3:b
+        LITERAL 'int', 0
+
+
+# decl.mvl symbol table
+# 2019-04-28 19:01:29
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [2] <ENVIRONMENT>
+  <Entry SCOPE_1(3) 'a':'int'>
+  <Entry SCOPE_1(4) 'b':'int'>
+Scope SCOPE_2(6) [2] <SCOPE_1>
+  <Entry SCOPE_2(8) 'a':'int'>
+  <Entry SCOPE_2(9) 'b':'int'>
+Scope SCOPE_3(11) [2] <SCOPE_2>
+  <Entry SCOPE_3(13) 'a':'int'>
+  <Entry SCOPE_3(14) 'b':'int'>

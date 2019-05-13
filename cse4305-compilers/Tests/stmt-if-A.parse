@@ -1,0 +1,32 @@
+# stmt-if-A.mvl parse tree
+# 2019-04-28 19:01:29
+
+
+(   1) PROGRAM
+(   1)   STATEMENT (BLOCK) <4>
+(   3)     STATEMENT (IF-THEN)
+(   3)       LITERAL 'int' 0
+(   3)       STATEMENT (BLOCK) <1>
+(   4)         STATEMENT (WRITE) <1>
+(   4)           LITERAL 'string' 'was True'
+(   8)     STATEMENT (IF-THEN)
+(   8)       LITERAL 'int' 1
+(   8)       STATEMENT (BLOCK) <1>
+(   9)         STATEMENT (WRITE) <1>
+(   9)           LITERAL 'string' 'was True'
+(  13)     STATEMENT (IF-THEN-ELSE)
+(  13)       LITERAL 'int' 0
+(  13)       STATEMENT (BLOCK) <1>
+(  14)         STATEMENT (WRITE) <1>
+(  14)           LITERAL 'string' 'was True'
+(  15)       STATEMENT (BLOCK) <1>
+(  16)         STATEMENT (WRITE) <1>
+(  16)           LITERAL 'string' 'was False'
+(  20)     STATEMENT (IF-THEN-ELSE)
+(  20)       LITERAL 'int' 1
+(  20)       STATEMENT (BLOCK) <1>
+(  21)         STATEMENT (WRITE) <1>
+(  21)           LITERAL 'string' 'was True'
+(  22)       STATEMENT (BLOCK) <1>
+(  23)         STATEMENT (WRITE) <1>
+(  23)           LITERAL 'string' 'was False'

@@ -1,0 +1,94 @@
+#-----------------------------------------------------------
+# Grammar Summary
+# 2019-Apr-09
+#-----------------------------------------------------------
+# Notation
+#-------------------
+All caps (e.g., IDENTIFIER) and inside '' marks (e.g., '{')
+indicate tokens or token categories.
+
+Inside angles, < ... >, indicates grammar non-terminal.
+
+Inside brackets, [ ... ], indicates optional (0 or 1 times).
+Inside brackets with *, [ ... ]*, indicates zero or more times.
+Inside brackets with +, [ ... ]+, indicates one or more times.
+
+ -- NOTE  -- NOTE  -- NOTE  -- NOTE  -- NOTE  -- NOTE  -- NOTE --
+
+The following Grammar Summary is just that -- a summary.  It is
+not the best way to write the actual parsing rules that would be
+in a CFG.
+
+As an example, to get the precedence / associativity to parse
+correctly, the operators must be in the expression parsing rule.
+
+Also, the various lists (with their optional parts) have to be
+restated
+
+ -- NOTE  -- NOTE  -- NOTE  -- NOTE  -- NOTE  -- NOTE  -- NOTE --
+
+#-----------------------------------------------------------
+# Grammar Summary
+#-------------------
+# The program as a whole ...
+<program>        <-   <block_stmt>
+
+#-------------------
+# Expressions ...
+
+<binary_op>      <-   '+' | '-' | '*' | '/' | '%' | '^'
+                    | '<' | '<=' | '==' | '!=' | '>=' | '>'
+                    | '&&' | '||' | '='
+
+<expr>           <-   <expr> <binary_op> <expr>
+                    | <unary_op> <expr>
+                    | '(' <expr> ')'
+                    | <literal>
+                    | <lvalue>
+
+<expr/string>    <-   <expr> | STRING_LITERAL
+
+<literal>        <-   INT_LITERAL
+
+<lvalue>         <-   IDENTIFIER
+
+<unary_op>       <-   '-' | '+' | '!'
+
+#-------------------
+# Types / Decls ...
+
+<decl>           <-   IDENTIFIER ':' <type> [ '=' <expr> ]
+
+<type>           <-   'int'
+
+#-------------------
+# Statements ...
+
+<block_stmt>     <-   '{' <stmt/decl_list> [ ';' ] '}'
+
+<expr_stmt>      <-   <expr>
+
+<if_stmt>        <-   'if' <expr> <block_stmt> [ 'else' <block_stmt> ]
+
+<read_stmt>      <-   'read' '(' <lvalue> [ ',' <lvalue> ]* ')'
+
+<stmt>           <-   <block_stmt>
+                    | <expr_stmt>
+                    | <if_stmt>
+                    | <read_stmt>
+                    | <while_stmt>
+                    | <write_stmt>
+
+<while_stmt>     <-   'while' <expr> <block_stmt>
+
+<write_stmt>     <-   'write' '(' [ <expr/string> [ ',' <expr/string> ]* ] ')'
+
+#-------------------
+# Statements or Decl ...
+
+<stmt/decl>      <-   <stmt>
+                    | <decl>
+
+<stmt/decl_list> <- [ <stmt/decl> [ ';' <stmt/decl> ]* ]
+
+#-----------------------------------------------------------

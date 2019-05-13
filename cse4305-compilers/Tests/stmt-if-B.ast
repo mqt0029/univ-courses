@@ -1,0 +1,33 @@
+# stmt-if-B.mvl AST
+# 2019-04-30 17:22:22
+
+
+SCOPE 'SCOPE_1' <3>
+  VARIABLE_INIT SCOPE_1:a
+    LITERAL 'int', 0
+  IF
+    LVALUE 'SCOPE_1:a' 'int'
+    SCOPE 'SCOPE_2' <1>
+      WRITE <1>
+        LITERAL 'string', 'was True'
+    NOOP
+  IF
+    LVALUE 'SCOPE_1:a' 'int'
+    SCOPE 'SCOPE_3' <1>
+      WRITE <1>
+        LITERAL 'string', 'was True'
+    SCOPE 'SCOPE_4' <1>
+      WRITE <1>
+        LITERAL 'string', 'was False'
+
+
+# stmt-if-B.mvl symbol table
+# 2019-04-30 17:22:22
+
+
+Scope ENVIRONMENT(0) [0] <NONE>
+Scope SCOPE_1(1) [1] <ENVIRONMENT>
+  <Entry SCOPE_1(2) 'a':'int'>
+Scope SCOPE_2(5) [0] <SCOPE_1>
+Scope SCOPE_3(10) [0] <SCOPE_1>
+Scope SCOPE_4(12) [0] <SCOPE_1>
