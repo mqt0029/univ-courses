@@ -2,7 +2,7 @@
 
 This program is now capable of syntactically, lexically and sematically analyze a miniaturized version of C.  
 Types supported: int, string literal  
-Functionality: loops, conditionals and rudimentary operators and command added.
+Functionality: loops, conditionals and rudimentary operators and command added.  
 **PROJECT IS NOT PERFECT. USE AT YOUR OWN RISK!!!**
 
 ## Current Compiler Progress
