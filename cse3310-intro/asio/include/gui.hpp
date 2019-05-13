@@ -1,3 +1,8 @@
+// Tram, Minh
+// mqt0029
+// 1001540029
+// 2019-05-13
+
 #ifndef NCURSES_GUI_HPP
 #define NCURSES_GUI_HPP
 

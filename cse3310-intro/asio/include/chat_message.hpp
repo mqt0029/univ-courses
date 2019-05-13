@@ -1,3 +1,8 @@
+// Tram, Minh
+// mqt0029
+// 1001540029
+// 2019-05-13
+
 #ifndef CHAT_MESSAGE_HPP
 #define CHAT_MESSAGE_HPP
 

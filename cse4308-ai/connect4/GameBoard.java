@@ -1,3 +1,8 @@
+// Tram, Minh
+// mqt0029
+// 1001540029
+// 2019-05-13
+
 /*  f( x ) summary
  *  Constructor GameBoard( inputfile ) makes GameBoard object from inputfile
  *              GameBoard( int [][]  ) makes GameBoard from existing boards as 2D int array

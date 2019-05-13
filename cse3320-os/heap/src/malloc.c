@@ -1,5 +1,7 @@
-// NAME: MINH TRAM
-// ID: 1001540029
+// Tram, Minh
+// mqt0029
+// 1001540029
+// 2019-05-13
 
 #include <assert.h>
 #include <stdio.h>

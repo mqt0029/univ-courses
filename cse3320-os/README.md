@@ -2,7 +2,7 @@
 
 These are attempts at learning how fundamental concepts of OS works.
 These projects are completed during the semester but are **CURRENTLY UNDER
-REFACTOR/OPTIMIZATION** and should only be use for reference.
+REFACTOR/OPTIMIZATION** and should only be use for reference.  
 
 | Project Name | % done | Concepts Covered |
 | ------------ |:------:| :--------------: |
