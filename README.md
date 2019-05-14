@@ -3,7 +3,6 @@
 Repository for courses done at the University of Texas at Arlington.
 These are programs that are done for classes listed below.
 Detailed description of each project will be provided in their individual folders.
-There's also independent projects done just for fun if you want to check those out.
 
 _**USE AT YOUR OWN RISK!!!**_
 
@@ -22,7 +21,3 @@ _**USE AT YOUR OWN RISK!!!**_
 - [x] CSE3330 - Databases ( empty )
 - [x] CSE3310 - Introduction to Software Engineering
 - [x] CSE3320 - Operating Systems
-
-## Just for Fun Projects
-
-- [ ] Arduino Remote Controller
